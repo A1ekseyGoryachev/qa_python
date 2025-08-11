@@ -40,7 +40,7 @@ class TestBooksCollector:
     def test_set_book_genre_true(self, book):
         book.add_new_book(BOOK_TITLE_1)
         book.set_book_genre(BOOK_TITLE_2, GENRE)
-        new_book_genre = list(book.books_genre.balues())[0]
+        new_book_genre = list(book.books_genre.values())[0]
         assert new_book_genre == GENRE
 
     def test_get_book_genre_true(self, book):
@@ -94,7 +94,7 @@ class TestBooksCollector:
     def test_get_list_of_favorites_books_length(self, book, name, book_count):
         for book_name in name:
             book.add_new_book(book_name)
-            book.adda_book_in_favorites(book_name)
+            book.add_book_in_favorites(book_name)
         favorites = book.get_list_of_favorites_books()
         assert len(favorites) == book_count
     
