@@ -52,7 +52,7 @@ class TestBooksCollector:
     def test_get_books_with_specific_genre_true(self, book):
         for book_f in BOOKS_TITLE_FANTASY:
             book.add_new_book(book_f)
-            book.books_genre[Book_f] = GENRE
+            book.books_genre[book_f] = GENRE
         for book_d in BOOKS_TITLE_DETECTIVE:
             book.add_new_book(book_d)
             book.books_genre[book_d] = GENRE_DETECTIVE
